@@ -1,13 +1,3 @@
-# Stopwatch - Android App with Jetpack Compose
-
-A simple stopwatch application with jetpack compose using foreground and bound services 
-
-<p align="center">
-  <img src="https://github.com/stevdza-san/Stopwatch-Android-App/blob/master/Stopwatch.png" href="https://youtu.be/JflJjPxhFQo">
-</p>
-<p align="left">
-  <a href="https://youtu.be/JflJjPxhFQo" align="center">Check YouTube for Complete Video Tutorial</a>
-</p>
 
 This application basically consists of 3 different textunits representing Hours, Minutes and Seconds.
 Also we got two buttons on the UI. The first button will be changed on the basis of service state and the second button will allow us to cancel the foreground service which will result in resetting of our stopwatch.
