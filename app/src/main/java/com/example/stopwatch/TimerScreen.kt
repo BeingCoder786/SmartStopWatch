@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.stopwatch.service.ServiceHelper
 import com.example.stopwatch.service.StopwatchService
@@ -52,6 +53,8 @@ fun TimerScreen(stopwatchService: StopwatchService) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+
+            Text(text = "Time is what we want most, but what we use worst", style = MaterialTheme.typography.h6, textAlign = TextAlign.Center , color = Color.White)
             AnimatedContent(targetState = hours, transitionSpec = { addAnimation() }) {
                 Text(
                     text = hours,
@@ -105,11 +108,11 @@ fun TimerScreen(stopwatchService: StopwatchService) {
             ) {
                 Text(
                     text = if (currentState == StopwatchState.Started) {
-                        "Stop"
+                        "Stop Timer"
                     } else if ((currentState == StopwatchState.Stopped)) {
-                        "Resume"
+                        "Resume Timer"
                     } else {
-                        "Start"
+                        "Start Timer"
                     },
                 )
             }
@@ -127,7 +130,8 @@ fun TimerScreen(stopwatchService: StopwatchService) {
                 enabled = seconds != "00" && currentState != StopwatchState.Started,
                 colors = ButtonDefaults.buttonColors(disabledBackgroundColor = Light),
             ) {
-                Text(text = "Cancel")
+                Text(text = "Cancel Timer")
+
             }
         }
     }
